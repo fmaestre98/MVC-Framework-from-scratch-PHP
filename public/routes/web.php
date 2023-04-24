@@ -3,15 +3,19 @@
 use Lib\Route;
 
 Route::get("/",function (){
-   echo "Home Page";
+   return "Home Page";
 });
 
 Route::get("/about",function (){
-    echo "About Page";
+    return "About Page";
  });
 
  Route::get("/contact",function (){
-    echo "Contact Page";
+    return "Contact Page";
+ });
+
+ Route::get("/group/:groupName",function ($groupName){
+    return "Group Name Page\n"."<h1>$groupName</h1>";
  });
 
  Route::dispatch();

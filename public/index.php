@@ -2,7 +2,7 @@
 
 require_once "../autoloader.php";
 
-require_once "../public/routes/web.php";
+require_once "../routes/web.php";
 
 
  

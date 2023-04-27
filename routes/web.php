@@ -1,10 +1,9 @@
 <?php
 
 use Lib\Route;
+use App\Controllers\HomeController;
 
-Route::get("/",function (){
-   return "Home Page";
-});
+Route::get("/",[HomeController::class,'index']);
 
 Route::get("/about",function (){
     return "About Page";

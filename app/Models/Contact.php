@@ -2,21 +2,39 @@
 
 namespace App\Models;
 
-use Lib\Connection;
 
 class Contact{
-  
-  
-    public function queryAll()
-    {
+   private $id;
+   private $name;
+   private $email;
+   private $phone;
 
-        $connection=new Connection();
-        $connection->get_Connection();
-        $res=$connection->query("SELECT * FROM contacts");
-        $connection->close_Connection();
 
-        return $res; 
-        
-    }
+    public function __construct(int $id = null,string $name,string $email,string $phone) {
+    $this->id=$id;
+    $this->name=$name;
+    $this->email=$email;
+    $this->phone=$phone;
+   }
+ 
+   public function getId()
+   {
+    return $this->id;
+   } 
+
+   public function getName()
+   {
+    return $this->name;
+   }
+   
+   public function getEmail()
+   {
+    return $this->email;
+   }
+
+   public function getPhone()
+   {
+    return $this->phone;
+   }
 
 }

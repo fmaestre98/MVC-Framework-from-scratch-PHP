@@ -48,10 +48,20 @@ class Connection
     public function query($sql)
     {
 
-        $this->query=$this->connection->query($sql)->fetch_all(MYSQLI_ASSOC);
+        $this->query=$this->connection->query($sql);
         
-        return $this->query; 
+        return $this; 
         
+    }
+
+    public function first()
+    {
+        return $this->query->fetch_assoc();
+    }
+
+    public function get()
+    {
+        return $this->query->fetch_all(MYSQLI_ASSOC);
     }
 
 }

@@ -1,8 +1,8 @@
 <?php
 
-use Lib\Route;
-use App\Controllers\HomeController;
-use App\Controllers\UserController;
+use lib\Route;
+use app\controllers\HomeController;
+use app\controllers\UserController;
 
 Route::get("/",[HomeController::class,'index']);
 

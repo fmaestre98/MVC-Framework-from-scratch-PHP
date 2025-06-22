@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controllers;
+namespace app\controllers;
 
-use App\Models\User;
+use app\models\User;
 
 class UserController extends Controller{
     public function index()

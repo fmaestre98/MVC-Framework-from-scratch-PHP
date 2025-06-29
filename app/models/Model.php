@@ -9,6 +9,8 @@ class Model{
     private $connection;
     private $query;
 
+    public static $schema = [];
+    public static $tableName = "";
     
 
      public function open_Connection(){

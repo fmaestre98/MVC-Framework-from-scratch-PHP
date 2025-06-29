@@ -14,6 +14,7 @@ services:
       - DB_USER=root
       - DB_PASS=secret
       - DB_NAME=mvc_db
+    entrypoint: ["sh", "-c", "sleep 10 && php migrate.php && apache2-foreground"]
 
   db:
     image: mysql:8.0
